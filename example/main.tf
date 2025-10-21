@@ -4,7 +4,7 @@ locals {
 }
 
 module "certificate" {
-  source  = "silinternational/acm-certificate/aws"
+  source  = "sil-org/acm-certificate/aws"
   version = "0.1.0"
 
   certificate_domain_name = local.full_domain_name
@@ -13,7 +13,7 @@ module "certificate" {
 }
 
 module "domain" {
-  source  = "silinternational/api-gateway-custom-domain/aws"
+  source  = "sil-org/api-gateway-custom-domain/aws"
   version = "0.1.0"
 
   api_name        = var.api_name
